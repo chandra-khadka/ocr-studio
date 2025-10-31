@@ -4,7 +4,7 @@ import {runOCR} from '../services/api'
 
 /** ===== Demo assets ===== */
 import ctznImg from '../assets/images/ctzn.png'
-import passportImg from '../assets/images/passport.jpeg'
+import passportImg from '../assets/images/passport.jpg'
 import licenseImg from '../assets/images/license.jpg'
 import voterImg from '../assets/images/voter_id.jpg'
 import nationalIdImg from '../assets/images/national_id.jpg'

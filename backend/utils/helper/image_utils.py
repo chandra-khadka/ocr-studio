@@ -463,7 +463,7 @@ def clean_ocr_result(result, use_segmentation=False, vision_enabled=True, prepro
             # Remove image references like ![image](data:image/...)
             text = re.sub(r'!\[.*?\]\(data:image/[^)]+\)', '', text)
 
-            # Remove basic markdown image references like ![alt](img-1.jpg)
+            # Remove basic markdown image references like ![alt](img-license.jpg)
             text = re.sub(r'!\[[^\]]*\]\([^)]+\)', '', text)
 
             # Remove base64 encoded image data
