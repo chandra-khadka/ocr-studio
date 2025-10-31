@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=${API_KEY:-}
+      - CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173

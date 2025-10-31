@@ -1,0 +1,48 @@
+fastapi==0.115.2
+uvicorn[standard]==0.29.0
+python-multipart==0.0.18
+pydantic>=2.6.4
+pycountry>=22.3.13
+python-dotenv>=1.0.0
+requests>=2.31.0
+httpx>=0.27.0
+httpcore>=1.0.3
+aiohttp==3.12.4
+loguru==0.7.2
+
+# PDF/Image/OCR
+Pillow==10.2.0
+pdf2image==1.17.0
+PyMuPDF==1.26.0
+opencv-python==4.10.0.84
+pytesseract==0.3.13
+numpy==1.26.4
+pandas==1.5.3
+scipy==1.11.4
+
+# AI + LLMs
+transformers==4.52.3
+tokenizers==0.21.0
+google-generativeai==0.4.1
+mistralai==1.8.1
+ollama==0.5.0
+tenacity==8.2.3
+
+# Streamlit
+streamlit>=1.30.0
+streamlit-chat==0.1.1
+plotly==6.1.2
+
+# Dev tools
+pytest==8.2.1
+pytest-asyncio==1.0.0
+black==25.1.0
+flake8==7.0.0
+pathlib~=1.0.1
+pypdf2~=3.0.1
+fitz~=0.0.1.dev2
+torch==2.7.0
+
+markdown-it-py
+weasyprint==61.2; platform_system != "Windows"
+pydantic-settings==2.4.0

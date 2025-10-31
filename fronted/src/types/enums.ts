@@ -1,0 +1,52 @@
+export enum DocumentType {
+    GENERAL = 'GENERAL',
+    GOVERNMENT_DOCUMENT = 'GOVERNMENT_DOCUMENT',
+    CTZN_FRONT = 'CTZN_FRONT',
+    CTZN_BACK = 'CTZN_BACK',
+    LICENSE = 'LICENSE',
+    VOTER_ID = 'VOTER_ID',
+    PASSPORT_FRONT = 'PASSPORT_FRONT',
+    PASSPORT_BACK = 'PASSPORT_BACK',
+    NATIONAL_ID_FRONT = 'NATIONAL_ID_FRONT',
+    NATIONAL_ID_BACK = 'NATIONAL_ID_BACK',
+    NEWSPAPER = 'NEWSPAPER',
+    LETTER = 'LETTER',
+    FORM = 'FORM',
+    BOOK = 'BOOK',
+    RECIPE = 'RECIPE',
+    HANDWRITTEN = 'HANDWRITTEN',
+    MAP = 'MAP',
+    TABLE = 'TABLE',
+    OTHER = 'OTHER'
+}
+
+export enum DocumentFormat {
+    HANDWRITTEN = 'HANDWRITTEN',
+    PRINTED = 'PRINTED',
+    STANDARD = 'STANDARD',
+    PLASTIC_COVER = 'PLASTIC_COVER'
+}
+
+export enum Language {
+    NEPALI = 'NEPALI',
+    ENGLISH = 'ENGLISH',
+    AUTO_DETECT = 'AUTO_DETECT'
+}
+
+export enum OCRProvider {
+    GEMINI = 'GEMINI',
+    MISTRAL = 'MISTRAL',
+    OLLAMA = 'OLLAMA',
+    VLLM = 'VLLM',
+    GEMINI_OPENSOURCE = 'GEMINI_OPENSOURCE',
+    NONE = 'NONE'
+}
+
+export enum CorrectionProvider {
+    GEMINI = 'GEMINI',
+    MISTRAL = 'MISTRAL',
+    OLLAMA = 'OLLAMA',
+    VLLM = 'VLLM',
+    GEMINI_OPENSOURCE = 'GEMINI_OPENSOURCE',
+    NONE = 'NONE'
+}

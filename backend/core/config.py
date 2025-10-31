@@ -1,0 +1,46 @@
+from typing import List, Optional, Literal
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    # Pydantic Settings config
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+        case_sensitive=False,
+    )
+
+    # App
+    APP_NAME: str = "Visionary OCR API"
+    API_V1_PREFIX: str = "/v1"
+    ENV: Literal["development", "staging", "production"] = "production"
+
+    # CORS (set explicit origins in prod)
+    CORS_ORIGINS: List[str] = ["*"]
+
+    # Optional simple API key auth (leave empty to disable)
+    API_KEY: Optional[str] = None
+    API_KEY_HEADER: str = "x-api-key"
+
+    # Provider defaults (front-end may pass "PROVIDER:MODEL")
+    DEFAULT_OCR_PROVIDER: Literal["GEMINI", "MISTRAL", "OLLAMA", "VLLM", "GEMINI_OPENSOURCE", "NONE"] = "MISTRAL"
+    DEFAULT_CORRECTION_PROVIDER: Literal[
+        "GEMINI", "MISTRAL", "OLLAMA", "VLLM", "GEMINI_OPENSOURCE", "NONE"] = "GEMINI_OPENSOURCE"
+
+    # (Optional) legacy dropdown seeds — safe to keep for UI
+    OCR_MODELS: List[str] = ["ocr-latest", "gemini-gemma-3-4b-it", "mistral-small"]
+    CORRECTION_MODELS: List[str] = ["gemini-1.5-pro", "mistral-small-latest"]
+
+    MISTRAL_API_KEY: Optional[str] = "qXUB3UeGHfBdu2qVenF5AJ3BkjG8ROEh"
+    GEMINI_API_KEY: Optional[str] = "AIzaSyBb-ano39YklkZ3S4WvKbQJ6m3sSFzfU20"
+    OLLAMA_ENDPOINT: str = "http://localhost:11434"  # prefer this name
+    VLLM_SERVER_URL: Optional[str] = "https://llm.esewa.com.np"
+    VLLM_MODELS: List[str] = []  # optional static list for VLLM
+
+    # --- Back-compat alias (if you had OLLAMA_API in old code) ---
+    # Define but don't use elsewhere; set OLLAMA_ENDPOINT in .env instead.
+    OLLAMA_API: Optional[str] = None
+
+
+settings = Settings()
