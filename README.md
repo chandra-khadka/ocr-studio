@@ -466,25 +466,6 @@ For complete API documentation, visit http://localhost:8000/docs when the backen
 - `NEPALI`
 - `AUTO_DETECT` - Automatic language detection
 
-## 🧪 Testing
-
-### Backend Tests
-
-```bash
-cd backend
-source venv/bin/activate
-pytest
-```
-
-### Frontend Tests
-
-```bash
-cd fronted
-pnpm test
-# OR
-npm test
-```
-
 ## 📝 Development Guidelines
 
 ### Backend
@@ -547,11 +528,160 @@ npm run lint
 
 ## 📄 License
 
-[Add your license here]
+MIT License
+
+Copyright (c) 2025 Team AI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
 ## 🤝 Contributing
 
-[Add contribution guidelines here]
+We welcome contributions from the community! Here's how you can help improve AI OCR Studio.
+
+### Getting Started
+
+1. **Fork the repository** on GitHub
+2. **Clone your fork** locally:
+   ```bash
+   git clone https://github.com/your-username/ai-ocr-studio.git
+   cd ai-ocr-studio
+   ```
+3. **Create a new branch** for your feature or bugfix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   # or
+   git checkout -b fix/your-bugfix-name
+   ```
+4. **Set up the development environment** (see Installation & Setup section above)
+
+### Development Workflow
+
+1. **Make your changes** following the development guidelines below
+2. **Test your changes** thoroughly:
+   - Run backend tests: `cd backend && pytest`
+   - Test the frontend: `cd fronted && pnpm test`
+   - Manually test the features you've changed
+3. **Commit your changes** with clear, descriptive commit messages:
+   ```bash
+   git commit -m "feat: add new OCR provider support"
+   # or
+   git commit -m "fix: resolve API endpoint routing issue"
+   ```
+4. **Push to your fork**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Create a Pull Request** on GitHub with a clear description of your changes
+
+### Commit Message Guidelines
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/) format:
+
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `docs:` - Documentation changes
+- `style:` - Code style changes (formatting, etc.)
+- `refactor:` - Code refactoring
+- `test:` - Adding or updating tests
+- `chore:` - Maintenance tasks
+
+Examples:
+- `feat: add Gemini 2.0 Flash support`
+- `fix: resolve 404 error on OCR endpoint`
+- `docs: update API documentation`
+- `refactor: improve error handling in OCR service`
+
+### Code Style Guidelines
+
+#### Backend (Python)
+
+- Follow **PEP 8** style guide
+- Use **type hints** for all function parameters and return types
+- Write **docstrings** for all public functions and classes
+- Keep functions focused and single-purpose
+- Use meaningful variable and function names
+- Format code with **Black**:
+  ```bash
+  cd backend
+  black .
+  ```
+- Run linting with **flake8**:
+  ```bash
+  cd backend
+  flake8 .
+  ```
+
+#### Frontend (TypeScript/React)
+
+- Use **TypeScript** for type safety
+- Follow **React best practices**:
+  - Use functional components with hooks
+  - Keep components small and focused
+  - Extract reusable logic into custom hooks
+- Use **Tailwind CSS** for styling
+- Format code with ESLint:
+  ```bash
+  cd fronted
+  pnpm lint
+  ```
+- Follow naming conventions:
+  - Components: PascalCase (e.g., `FileUploader.tsx`)
+  - Functions/variables: camelCase (e.g., `handleSubmit`)
+  - Constants: UPPER_SNAKE_CASE (e.g., `API_BASE_URL`)
+
+### Pull Request Guidelines
+
+1. **Keep PRs focused**: One feature or bugfix per PR
+2. **Write clear descriptions**: Explain what changes you made and why
+3. **Reference issues**: Link to related issues using keywords like "Fixes #123"
+4. **Add tests**: Include tests for new features or bug fixes
+5. **Update documentation**: Update README.md or API docs if needed
+6. **Ensure CI passes**: Make sure all tests and linting pass
+
+### Reporting Issues
+
+When reporting bugs or requesting features:
+
+1. **Check existing issues** to avoid duplicates
+2. **Use clear, descriptive titles**
+3. **Provide detailed information**:
+   - Steps to reproduce (for bugs)
+   - Expected vs actual behavior
+   - Environment details (OS, Python version, Node version)
+   - Error messages or logs
+   - Screenshots if applicable
+
+### Code Review Process
+
+1. All PRs require at least one approval
+2. Address review comments promptly
+3. Be open to feedback and suggestions
+4. Maintain a respectful and constructive tone
+
+### Questions?
+
+- Open an issue for bug reports or feature requests
+- Start a discussion for questions or ideas
+- Check existing documentation first
+
+Thank you for contributing to AI OCR Studio! 🎉
 
 ## 📞 Support
 
@@ -570,5 +700,3 @@ For issues and questions:
 - [ ] Advanced analytics dashboard
 
 ---
-
-**Made with ❤️ for intelligent document processing**
