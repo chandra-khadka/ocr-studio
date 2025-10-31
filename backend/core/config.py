@@ -1,11 +1,15 @@
+from pathlib import Path
 from typing import List, Optional, Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# Get the backend directory (parent of core/)
+BACKEND_DIR = Path(__file__).parent.parent
 
 
 class Settings(BaseSettings):
     # Pydantic Settings config
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=str(BACKEND_DIR / ".env"),
         env_file_encoding="utf-8",
         extra="ignore",
         case_sensitive=False,
@@ -32,10 +36,10 @@ class Settings(BaseSettings):
     OCR_MODELS: List[str] = ["ocr-latest", "gemini-gemma-3-4b-it", "mistral-small"]
     CORRECTION_MODELS: List[str] = ["gemini-1.5-pro", "mistral-small-latest"]
 
-    MISTRAL_API_KEY: Optional[str] = "qXUB3UeGHfBdu2qVenF5AJ3BkjG8ROEh"
-    GEMINI_API_KEY: Optional[str] = "AIzaSyBb-ano39YklkZ3S4WvKbQJ6m3sSFzfU20"
+    MISTRAL_API_KEY: Optional[str] = None
+    GEMINI_API_KEY: Optional[str] = None
     OLLAMA_ENDPOINT: str = "http://localhost:11434"  # prefer this name
-    VLLM_SERVER_URL: Optional[str] = "https://llm.esewa.com.np"
+    VLLM_SERVER_URL: Optional[str] = None
     VLLM_MODELS: List[str] = []  # optional static list for VLLM
 
     # --- Back-compat alias (if you had OLLAMA_API in old code) ---

@@ -236,7 +236,7 @@ def process_segmented_image(image_path: Union[str, Path], output_dir: Optional[P
 
 if __name__ == "__main__":
     # Use a valid image file path
-    image_path = "/Users/chandrabahadurkhadka/PycharmProjects/esewa-ocr/3pCHbPFnHdfHX1fmFr53cKbzWjuD5zP3.png"  # Update to a valid image
+    image_path = "image_path"  # Update to a valid image
     logger.info(f"Testing image segmentation on {image_path}")
     output_dir = Path("/output")
     results = process_segmented_image(image_path, output_dir)

@@ -16,7 +16,7 @@ class VLLMProvider(BaseOCRProvider):
     """VLLM provider for OCR using models served via OpenAI-compatible API"""
 
     def __init__(self, api_key: str, model: str = "google/gemma-3-12b-it",
-                 server_url: str = "https://llm.esewa.com.np"):  # Removed /v1 from default
+                 server_url: str = "https://vllm.server.com.np"):  # Removed /v1 from default
         self.__vllm_model = model
         self.server_url = server_url.rstrip('/')  # Remove trailing slash if present
         self.available_models = []

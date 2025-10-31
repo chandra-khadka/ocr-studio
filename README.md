@@ -28,6 +28,23 @@ pnpm dev  # or npm run dev
 # 6. Open http://localhost:7090/home in your browser
 ```
 
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](ui_images/dashoard.png)
+
+### Chat Interface
+![Chat Interface](ui_images/chat.png)
+
+### Documentation Page
+![Documentation](ui_images/docs.png)
+
+### Sample Document
+![Sample Document](ui_images/sample_document.png)
+
+### Sample OCR Output
+![Sample OCR Output](ui_images/sample_ocr.png)
+
 ## 🚀 Features
 
 - **Multi-Provider OCR Support**: Supports multiple OCR providers including Gemini, Mistral, Ollama, and VLLM
@@ -335,6 +352,13 @@ ai-ocr-studio/
 │   ├── package.json        # Node dependencies
 │   ├── vite.config.ts      # Vite configuration
 │   └── .env                # Environment variables (create this)
+│
+├── ui_images/              # UI screenshots and images
+│   ├── chat.png            # Chat interface screenshot
+│   ├── dashoard.png        # Dashboard screenshot
+│   ├── docs.png            # Documentation page screenshot
+│   ├── sample_document.png # Sample document example
+│   └── sample_ocr.png      # Sample OCR output example
 │
 └── README.md               # This file
 ```
