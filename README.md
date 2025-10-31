@@ -28,23 +28,6 @@ pnpm dev  # or npm run dev
 # 6. Open http://localhost:7090/home in your browser
 ```
 
-## 📸 Screenshots
-
-### Dashboard
-![Dashboard](ui_images/dashoard.png)
-
-### Chat Interface
-![Chat Interface](ui_images/chat.png)
-
-### Documentation Page
-![Documentation](ui_images/docs.png)
-
-### Sample Document
-![Sample Document](ui_images/sample_document.png)
-
-### Sample OCR Output
-![Sample OCR Output](ui_images/sample_ocr.png)
-
 ## 🚀 Features
 
 - **Multi-Provider OCR Support**: Supports multiple OCR providers including Gemini, Mistral, Ollama, and VLLM
